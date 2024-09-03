@@ -90,5 +90,13 @@ Dentro do .eslintrc.json, adicionar uma regra que não deixa dar commit com vari
   }
 }
 ```
+Garantir que cada commit tenha um prefixo:
+```
+npm i git-commit-msg-linter
+```
+Após a instalação, adicionar um arquivo dentro da pasta .husky chamdado "commit-msg" e dentro do arquivo adicionar o comando
+```
+.git/hooks/commit-msg $1
+```
 
 
