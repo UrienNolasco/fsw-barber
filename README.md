@@ -63,6 +63,10 @@ Botão
 ```
 npx shadcn-ui@latest add button
 ```
+Card
+```
+npx shadcn@latest add card
+```
 
 ## Git Hooks
 Formatar o código antes de todos os commits para não dar conflito, para isso vamos utilizar a biblioteca Husky juntamente do Lint. Para adicionar ao projeto, rodar o comando:
