@@ -51,6 +51,10 @@ Após a instalação do do prettier, criar um arquivo .prettierrc.json na raiz d
     "semi": false
 }
 ```
+Rodar o comando abaixo para ver se a conflitos entre o Pretty e o ESLint
+```
+npm install eslint-config-prettier --save-dev
+```
 
 ## Adicionando o ShadcnUI 
 Esta vai ser a nossa biblioteca de componentes, para adicionar ao projeto, rodar o comando
