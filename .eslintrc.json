@@ -5,7 +5,14 @@
     "plugin:prettier/recommended"
   ],
   "rules": {
-    "no-unused-vars": "error"
+    "no-unused-vars": "error",
+    "prettier/prettier": [
+      "error",
+      {
+        "tabWidth": 2,
+        "semi": false,
+        "singleQuote": true
+      }
+    ]
   }
 }
-  
