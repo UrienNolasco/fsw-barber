@@ -107,4 +107,8 @@ Após a instalação, adicionar um arquivo dentro da pasta .husky chamdado "comm
 .git/hooks/commit-msg $1
 ```
 
-
+## Login com rede social(NextAuth)
+Rodar o comando para instalar o NextAuth
+```
+npm install next-auth
+```
