@@ -1,6 +1,8 @@
 "use server"
 
+import { authOptions } from "@/_lib/auth"
 import { db } from "@/_lib/prisma"
+import { getServerSession } from "next-auth"
 import { revalidatePath } from "next/cache"
 
 interface createBookingParams {
@@ -10,8 +12,14 @@ interface createBookingParams {
 }
 
 export const createBooking = async (params: createBookingParams) => {
+  const user = await getServerSession(authOptions)
+
+  if (!user) {
+    throw new Error("User not found")
+  }
+
   await db.booking.create({
-    data: params,
+    data: { ...params, userId: (user.user as any).id },
   })
   revalidatePath("/barbershop/[id]")
 }
